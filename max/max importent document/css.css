@@ -1,0 +1,39 @@
+.container{
+    width:900px;
+    border:2px solid purple;
+    background-color: green;
+    float:left;
+    
+
+
+
+
+
+
+
+}
+.item{
+    border:2px solid gray;
+   margin:12px 3px;
+   padding: 12px 3px;
+   background:pink;
+
+   
+
+
+    
+
+}
+#fruits{ 
+    float:left;
+    width:48%;
+}
+#computers{
+    float:left;
+    width:48%;
+
+}
+#max{
+    clear:left;
+    width:98%;
+}

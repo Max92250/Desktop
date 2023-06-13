@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+  .max {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
+
+    padding-top: 20px;
+
+
+
+
+  }
+
+  *,
+  ::after,
+  ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+
+  .card {
+
+
+    display: grid;
+    grid-template-columns: 200px 1fr;
+
+
+
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  img {
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    margin-left: 12px;
+
+
+  }
+
+  h4 {
+    color: black;
+    font-size: 24px;
+    width: 100%;
+    background-color: darkorchid;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 4px rgb(170, 99, 99);
+  }
+
+  p {
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .table {
+    width: 400px;
+    margin-left: 20px;
+
+    background-color: burlywood
+  }
+
+  .remove.pox {
+    display: none;
+  }
+
+
+  .max {
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
+  .table {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+
+  img {
+    margin: 0 auto;
+  }
+
+  .card {
+    display: grid;
+
+    grid-template-columns: 1fr;
+  }
+</style>
+
+<body>
+  <input type="text" class="steve">
+
+  <button class="submit">submit</button>
+  <div>
+    <div class="sectionCenter">
+    </div>
+    <div class="max"></div>
+
+  </div>
+
+
+  <script>
+    const menu = [
+      {
+        id: 1,
+        title: "buttermilk pancakes",
+        category: "breakfast",
+        price: 15.99,
+        img: "./images/item-1.jpeg",
+        desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+      },
+      {
+        id: 2,
+        title: "diner double",
+        category: "lunch",
+        price: 13.99,
+        img: "./images/item-2.jpeg",
+        desc: `vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats `,
+      },
+      {
+        id: 3,
+        title: "godzilla milkshake",
+        category: "shakes",
+        price: 6.99,
+        img: "./images/item-3.jpeg",
+        desc: `ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.`,
+      },
+      {
+        id: 4,
+        title: "country delight",
+        category: "breakfast",
+        price: 20.99,
+        img: "./images/item-4.jpeg",
+        desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `,
+      },
+      {
+        id: 5,
+        title: "egg attack",
+        category: "lunch",
+        price: 22.99,
+        img: "./images/item-5.jpeg",
+        desc: `franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up `,
+      },
+      {
+        id: 6,
+        title: "oreo dream",
+        category: "shakes",
+        price: 18.99,
+        img: "./images/item-6.jpeg",
+        desc: `Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday`,
+      },
+      {
+        id: 7,
+        title: "bacon overflow",
+        category: "breakfast",
+        price: 8.99,
+        img: "./images/item-7.jpeg",
+        desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
+      },
+      {
+        id: 8,
+        title: "american classic",
+        category: "lunch",
+        price: 12.99,
+        img: "./images/item-8.jpeg",
+        desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
+      },
+      {
+        id: 9,
+        title: "quarantine buddy",
+        category: "shakes",
+        price: 16.99,
+        img: "./images/item-9.jpeg",
+        desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+      },
+      {
+        id: 10,
+        title: "bison steak",
+        category: "dinner",
+        price: 22.99,
+        img: "./images/item-10.jpeg",
+        desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+      },
+    ];
+    const sectionCenter = document.querySelector('.sectionCenter')
+    const menuitem = document.querySelector('.menu-item');
+    const card = document.querySelector('.card')
+
+    function displayMenuitem(menu) {
+      let displayMenu = menu.map(function (item) {
+        // console.log(item);
+
+        return `<article class="menu-item">
+          <img src=${item.img} alt=${item.title} class="photo" />
+          <div class="item-info">
+            <header>
+              <h4>${item.title}</h4>
+              <h4 class="price">$${item.price}</h4>
+            </header>
+            <p class="item-text">
+              ${item.desc}
+            </p>
+           
+            
+          </div>
+        </article>`;
+      });
+      displayMenu = displayMenu.join("");
+      // console.log(displayMenu);
+
+      sectionCenter.innerHTML = displayMenu;
+    }
+
+    const pressed = [];
+    const secretCode = ["max", "chamling", "pratima"];
+    currentItem = 0;
+
+    const steve = document.querySelector('.steve')
+    const submit = document.querySelector('.submit')
+    const p = document.querySelector('.pox')
+
+    submit.addEventListener('click', function () {
+      max = steve.value;
+      pressed.push(max);
+
+
+
+
+      pressed.splice(secretCode.length- 1, pressed.length - secretCode.length);
+
+      if (pressed.join('').includes(secretCode[1])) {
+        console.log('DING DING!');
+        init();
+      
+
+
+
+
+  
+      }
+
+
+      if (pressed.join('').includes(secretCode[0])) {
+        console.log('DING DING!');
+        displayMenuitem(menu);
+        
+
+
+
+      }
+
+
+      console.log('active');
+    });
+
+
+
+
+    const url = 'https://api.github.com/users/john-smilga/followers?per_page=100'
+
+    async function fetchFollowers() {
+      const max = await fetch(url)
+      const data = await max.json()
+      return data
+    }
+    console.log(fetchFollowers());
+
+    const container = document.querySelector('.max')
+
+    function display(followers) {
+      const newFollowers = followers
+        .map((person) => {
+          const { avatar_url, login, html_url } = person
+          return `
+       <article class='card'>
+         <img src="${avatar_url}" alt='person' />
+         <div class='table'>
+           <h4>${login}</h4>
+           <p>This example shows a menu that will float to the left of the page if the viewport is 480 pixels wide or wider. If the viewport is less than 480 pixels, the menu will be on top of the con</p>
+            <a href="${html_url}" class="btn">view profile</a>
+         </div>
+       </article>
+       `
+        })
+        .join('')
+      container.innerHTML = newFollowers
+
+    }
+    async function init() {
+      const max = await fetchFollowers()
+
+      pages = display(max)
+    }
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

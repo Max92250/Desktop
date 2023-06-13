@@ -1,0 +1,68 @@
+.box{
+   width:300px;
+   background-color: rgba(95, 158, 160, 0.76);
+   height:320px;
+   margin: 0 auto;
+   text-align: center;
+   padding-top: 10px;
+   border-radius: 5px;
+   
+
+}
+.info{
+    font-size: 18px;
+    padding-top: 35px;
+color:rgba(0, 0, 0, 0.733);
+text-transform: uppercase;
+text-shadow:0px 0px 4px navajowhite;
+
+}
+.ico{
+    padding-right: 10px;
+    animation-name: i;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+@keyframes i{
+    0%{
+    transform: translateX(0);
+    color:navajowhite;
+    }
+    100%{
+        transform: translateX(5px);
+        color:purple;
+    }
+}
+
+.sidebar {
+    background-color: rgba(35, 55, 75, 0.9);
+    color: #ffffff;
+    padding: 6px 12px;
+    font-family: monospace;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 12px;
+    border-radius: 4px;
+  }
+  .map-container {
+    height: 400px;
+  }
+  
+.temp{
+    font-size: 26px;
+    color:khaki;
+
+}
+.inputField{
+    outline: none;
+    border-style: none;
+    border-radius: 5px;
+}
+.temps{
+    font-size: 10px;
+    color:lavender;
+}

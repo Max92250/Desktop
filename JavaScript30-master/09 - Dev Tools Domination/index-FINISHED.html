@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+
+<body>
+
+  <p onClick="makeGreen()" class="">×BREAK×DOWN×</p>
+  <div class="max">steve smith</div>
+  <button onclick="stee()">max</button>
+
+  <script>
+function stee(){
+def=document.querySelector(".max")
+function steve(){
+    steve="max chamling rai"
+
+    
+
+    def.textContent=steve;
+
+
+  
+}
+setTimeout(() => {
+   steve()
+ }, 3000);
+}
+
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log('hello');
+
+    // Interpolated
+    console.log('Hello I am a %s string!', '💩');
+
+    // Styled
+    // console.log('%c I am some great text', 'font-size:50px; background:red; text-shadow: 10px 10px 0 blue')
+
+    // warning!
+    console.warn('OH NOOO');
+
+    // Error :|
+    console.error('Shit!');
+2
+    // Info
+    console.info('Crocodiles eat 3-4 people per year');
+
+    // Testing
+    const p = document.querySelector('p');
+
+    console.log(p.classList.contains('max'), 'That is wrong!');
+
+    // clearing
+
+
+    // Viewing DOM Elements
+    console.log(p);
+    console.dir(p);
+
+
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+    // Grouping together
+    const fullNames = dogs.map(function (inventor){
+    return  [`${inventor.name} is a good boy`].join("");
+  
+
+     
+
+    });
+    console.log(fullNames);
+
+
+    // counting
+
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+
+ 
+ 
+    const url = 'https://api.github.com/users/john-smilga/followers?per_page=100'
+
+async function fetchFollowers(){
+  const max = await fetch(url)
+  const data = await max.json()
+  return data;
+}
+console.log(fetchFollowers());
+
+
+  </script>
+</body>
+
+</html>

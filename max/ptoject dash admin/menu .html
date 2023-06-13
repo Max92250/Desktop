@@ -1,0 +1,723 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <link rel="stylesheet" href="tt.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+
+
+
+
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+
+
+
+    .menu-btn:hover {
+        color: #4CCEEB
+    }
+
+    .sub-menu {
+        background: #3498DB;
+
+
+
+
+
+
+    }
+
+    .sub-menu a {
+        display: block;
+
+        color: #fff;
+
+        padding: 20px;
+        float: none;
+
+
+
+        font-size: 15px;
+
+
+    }
+
+    .sub-menu a:hover {
+        background: #55B1F0;
+
+    }
+
+    .dropdown {
+        position: relative;
+
+    }
+
+    .dropbtn {
+        color: #fff;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        margin-top: 4px;
+        margin-left: 20px;
+        background: pink;
+        box-shadow: rgba(0, 0, 0, 0.05);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left:
+            1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: green;
+    }
+
+    
+</style>
+
+
+<body>
+
+
+
+
+
+    <div id="sidebar">
+
+
+
+        <div class="sidebar-brand">
+            <h2><i class="fa fa-desktop"></i><span style="padding-left: 10px;">Webpage</span></h2>
+
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="#"><i class="fa fa-desktop"></i><span>Dashboard</span></a></li>
+                <li class="dropdown"><a href="#"><i class="fa fa-file"><span id="myBtn"
+                                class="dropbtn">Dropdown</span></a></i></li>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <li><a href="#" class="menu-btn"><i class="fa fa-file"></i><span>Project</span></a>
+
+
+                </li>
+                <li><a href="login.html"><i class="fa fa-dog"></i><span>Orders</span></a></li>
+                <li><a href="#"><i class="fa fa-users"></i><span>Income</span></a></li>
+                <li><a href="#"><i class="fa fa-users"></i><span>Account</span></a></li>
+                <li><a href="#"><i class="fa fa-dog"></i><span>Logout</span></a></li>
+
+
+
+
+            </ul>
+        </div>
+    </div>
+    <div id="main-content">
+        <header class="main-header">
+            <div class="header-left">
+                <h2><i class="fa fa-bars"></i>Dashboard</h2>
+            </div>
+            <div class="header-left">
+                <input class="search-bar" type="text" placeholder="Search Here.." />
+                <i class="fa fa-search"></i>
+
+            </div>
+            <div class="header-left">
+                <img src="img/op.png" class="img-responsive" />
+                <h5>Webs blog</h5>
+                <p style="color:darkcyan">admin</p>
+            </div>
+
+            <div class="clear"></div>
+
+
+        </header>
+
+
+        <div class="clear"></div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <h2 class="cus-num cus-h">130<i class="fas fa-user-injured"
+                            style="padding-left: 100px;color:#2f4f4f;"></i></h2>
+                    <p style="padding-right: 100px;">Caustomer </p>
+                </div>
+                <div class="flip-box-back">
+                    <h2 style="padding-top: 10px;color:cadetblue"> Max chamling</h2>
+                </div>
+            </div>
+
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <h2 class="cus-num cus-h">130<i class="fas fa-user-injured"
+                            style="padding-left: 100px;color:#2f4f4f;"></i></h2>
+                    <p style="padding-right: 120px;">Project</p>
+                </div>
+                <div class="flip-box-back">
+                    <h2 style="padding-top: 10px;color:cadetblue">Max chamling</h2>
+                </div>
+            </div>
+
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <h2 class="cus-num cus-h">130<i class="fas fa-user-injured"
+                            style="padding-left: 100px;color:#2f4f4f;"></i></h2>
+                    <p style="padding-right: 118px;">pending </p>
+                </div>
+                <div class="flip-box-back">
+                    <h2 style="padding-top: 10px;color:cadetblue">Maxchamling</h2>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+        <div class="content-pro-par container">
+
+
+            <div class="pro-table">
+                <div class="recent-pro">
+                    <div class="rec-h">
+                        <h2>Recent project</h2>
+                    </div>
+                    <div class="rec-btn">
+                        <button>see all</button>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <table style="width: 100%;">
+                    <tr>
+                        <th>Project title</th>
+                        <th>Department</th>
+                        <th> status</th>
+                    </tr>
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="rev-span"></span>Review</td>
+                    </tr>
+
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="progress-span"></span>Inprogress</td>
+                    </tr>
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="pending-span"></span>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="rev-span"></span>Review</td>
+                    </tr>
+
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="progress-span"></span>Inprogress</td>
+                    </tr>
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="pending-span"></span>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="rev-span"></span>Review</td>
+                    </tr>
+
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="progress-span"></span>Inprogress</td>
+                    </tr>
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="pending-span"></span>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="rev-span"></span>Review</td>
+                    </tr>
+
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="progress-span"></span>Inprogress</td>
+                    </tr>
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="pending-span"></span>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="rev-span"></span>Review</td>
+                    </tr>
+
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="progress-span"></span>Inprogress</td>
+                    </tr>
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="pending-span"></span>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="pending-span"></span>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Web Develpoment</td>
+                        <td>Develpoment Team </td>
+                        <td><span class="pending-span"></span>Pending</td>
+                    </tr>
+
+
+
+
+
+
+
+
+                </table>
+
+            </div>
+            <div class="cus-table">
+                <div class="recent-pro">
+                    <div class="rec-h">
+                        <h2 style="font-size: 17px;">All caustomer</h2>
+                    </div>
+                    <div class="rec-btn">
+                        <button>see all</button>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <table style="width: 100%;">
+                    <tr>
+                        <th>Pic</th>
+                        <th>Name</th>
+                        <th>Contact</th>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="img/op.png"></td>
+                        <td>Max chamling</td>
+                        <td class="td-cnt-i"><a href="tel:9804074431"><i class="fas fa-phone"></i></a><a
+                                href="mailto:maxrai788@gmail.com"><i class="fa fa-envelope"></i></a><a
+                                href="tel:9804074431"><i class="fa fa-map-marker"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="img/op.png"></td>
+                        <td>Max chamling</td>
+                        <td class="td-cnt-i"><a href="tel:9804074431"><i class="fas fa-phone"></i></a><a
+                                href="mailto:maxrai788@gmail.com"><i class="fa fa-envelope"></i></a><a
+                                href="tel:9804074431"><i class="fa fa-map-marker"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="img/op.png"></td>
+                        <td>Max chamling</td>
+                        <td class="td-cnt-i"><a href="tel:9804074431"><i class="fas fa-phone"></i></a><a
+                                href="mailto:maxrai788@gmail.com"><i class="fa fa-envelope"></i></a><a
+                                href="tel:9804074431"><i class="fa fa-map-marker"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="img/op.png"></td>
+                        <td>Max chamling</td>
+                        <td class="td-cnt-i"><a href="tel:9804074431"><i class="fas fa-phone"></i></a><a
+                                href="mailto:maxrai788@gmail.com"><i class="fa fa-envelope"></i></a><a
+                                href="tel:9804074431"><i class="fa fa-map-marker"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="img/op.png"></td>
+                        <td>Max chamling</td>
+                        <td class="td-cnt-i"><a href="tel:9804074431"><i class="fas fa-phone"></i></a><a
+                                href="mailto:maxrai788@gmail.com"><i class="fa fa-envelope"></i></a><a
+                                href="tel:9804074431"><i class="fa fa-map-marker"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="img/op.png"></td>
+                        <td>Max chamling</td>
+                        <td class="td-cnt-i"><a href="tel:9804074431"><i class="fas fa-phone"></i></a><a
+                                href="mailto:maxrai788@gmail.com"><i class="fa fa-envelope"></i></a><a
+                                href="tel:9804074431"><i class="fa fa-map-marker"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="img/op.png"></td>
+                        <td>Max chamling</td>
+                        <td class="td-cnt-i"><a href="tel:9804074431"><i class="fas fa-phone"></i></a><a
+                                href="mailto:maxrai788@gmail.com"><i class="fa fa-envelope"></i></a><a
+                                href="tel:9804074431"><i class="fa fa-map-marker"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="img/op.png"></td>
+                        <td>Max chamling</td>
+                        <td class="td-cnt-i"><a href="tel:9804074431"><i class="fas fa-phone"></i></a><a
+                                href="mailto:maxrai788@gmail.com"><i class="fa fa-envelope"></i></a><a
+                                href="tel:9804074431"><i class="fa fa-map-marker"></i></td>
+                    </tr>
+
+
+                </table>
+
+            </div>
+
+
+
+
+
+        </div>
+        <div class="clear"></div>
+
+
+
+
+
+
+
+        <div class="clear"></div>
+
+        <section class="hj">
+            <section class="section">
+                <div class="paras">
+                    <p class="sectiontag text-big" style="font-size: 23px;">The end of your search if here</p>
+                    <p class="sectionsubtag text-small" style="font-size: 13px;">Lorem ipsum dolor sit amet
+                        consectetur
+                        adipisicing elit. Pariatur quis, nobis dignissimos, placeat et cupiditate dicta non nesciunt
+                        facilis
+                        dolores molestias, quas iusto? Illo iure animi earum ex accusantium, eveniet, corrupti non
+                        id
+                        consectetur molestiae fugit eaque, dolore voluptatem ducimus! Dignissimos repudiandae
+                        aliquid
+                        cupiditate
+                        provident eligendi, quis sit consequuntur ex quia culpa mollitia! Consequuntur nihil
+                        eligendi
+                        dolor
+                        ut
+                        quis officia corporis incidunt quo atque asperiores. Possimus ipsum itaque, hic similique
+                        doloremque
+                        omnis magnam nemo tempora laudantium! Vero
+                    </p>
+                </div>
+                <div class="thumbnail">
+                    <img src="https://source.unsplash.com/1600x900/?html,ruby" alt="laptop image" class="imgfluid"
+                        style="height:100px">
+
+                </div>
+            </section>
+            <section class=" section section-left">
+                <div class="paras">
+                    <p class="sectiontag text-big" style="font-size: 23px;">The end of your search if here</p>
+                    <p class="sectionsubtag text-small" style="font-size: 13px;">Lorem ipsum dolor sit amet
+                        consectetur
+                        adipisicing elit. Pariatur quis, nobis dignissimos, placeat et cupiditate dicta non nesciunt
+                        facilis
+                        dolores molestias, quas iusto? Illo iure animi earum ex accusantium, eveniet, corrupti non
+                        id
+                        consectetur molestiae fugit eaque, dolore voluptatem ducimus! Dignissimos repudiandae
+                        aliquid
+
+
+                    </p>
+                    <span style="display:none;font-size: 13px;" class="ty">Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Magnam a
+                        reprehenderit in.</span>
+                    <button class="btn2" style="color: chartreuse;">Show</p>
+                </div>
+                <div class="thumbnail" style="width: 20%;">
+                    <img src="https://source.unsplash.com/1600x900/?php,html" alt="laptop image" class="imgfluid"
+                        style="height:100px">
+                </div>
+            </section>
+            <section class="section">
+                <div class="paras">
+                    <p class="sectiontag text-big" style="font-size: 23px;">The end of your search if here</p>
+                    <p class="sectionsubtag text-small" style="font-size: 13px;">Lorem ipsum dolor sit amet
+                        consectetur
+                        adipisicing elit. Pariatur quis, nobis dignissimos, placeat et cupiditate dicta non nesciunt
+                        facilis
+                        dolores molestias, quas iusto? Illo iure animi earum ex accusantium, eveniet, corrupti non
+                        id
+                        consectetur molestiae fugit eaque, dolore voluptatem ducimus! Dignissimos repudiandae
+                        aliquid
+                        cupiditate
+                        provident eligendi, quis sit consequuntur ex quia culpa mollitia! Consequuntur nihil
+                        eligendi
+                        dolor
+                        ut
+                        quis officia corporis incidunt quo atque asperiores. Possimus ipsum itaque, hic similique
+                        doloremque
+                        omnis magnam nemo tempora laudantium! Vero
+                    </p>
+                </div>
+                <div class="thumbnail">
+                    <img src="https://source.unsplash.com/1600x900/?html,php" alt="laptop image" class="imgfluid"
+                        style="height:100px">
+                </div>
+            </section>
+        </section>
+        <div class="clear"></div>
+        <div class="steve">
+            <div class="king">
+                <div class="thumb">
+
+
+
+
+
+
+                    <div class="jo" style="padding-top: 40px;padding-left: 200px;">
+                        <li class="gog">
+
+                            <img src="img/astoone.png" style="max-width: 90px;">
+                        </li>
+
+
+                        <li class="gog">
+                            <img src="img/astoone.png" style="max-width: 90px;">
+                        </li>
+
+
+                        <li class="gog">
+                            <img src="img/astoone.png" style="max-width: 90px;">
+                        </li>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="aston">
+
+            <div class="lol">
+                <h3>Login</h3>
+                <form action=" " name="registration id=" registration">
+                    <div class="oh">
+
+                        <span class="icon" for="username"><i class="fas fa-user"></i></span>
+                        <input type="text" placeholder="username" name="username" id="username">
+                    </div>
+                    <div class="oh">
+                        <span class="icon" for="email"><i class="fas fa-at"></i></span>
+                        <input type="email" placeholder="email" name="email" id="email">
+                    </div>
+                    <div class="oh">
+                        <span class="icon" for="password"><i class="fas fa-lock"></i></span>
+                        <input type="password" name="passsword" id="password"
+                            placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;">
+                    </div>
+
+                    <div class="ok">
+                        <input type="submit" value="login">
+                    </div>
+                    <div class="op">
+                        <span><i class="fab fa-facebook" aria-hidden="true"></i></span>
+                        <span><i class="fab fa-twitter" aria-hidden="true"></i></span>
+                        <span><i class="fab  fa-google-plus-g" aria-hidden="true"></i></span>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+      
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+        $(document).ready(function () {
+
+            $(".ty").mouseleave(function () {
+                $(".ty").hide();
+                $(".btn2").fadeIn(1000);
+
+
+            });
+        });
+
+
+
+        $(document).ready(function () {
+
+            $(".btn2").mouseenter(function () {
+                $(".ty").show();
+                $(".btn2").fadeOut(3000);
+            });
+        });
+
+
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.querySelector(".main-header").style.top = "0";
+            } else {
+                document.querySelector(".main-header").style.top = "-150px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+
+
+
+        var dropdown = document.getElementsByClassName("menu-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            $("#myBtn").mouseenter(function () {
+                $("#myDropdown").slideToggle("slow");
+            });
+        });
+        $(document).ready(function () {
+            $("#myDropdown").mouseleave(function () {
+                $("#myDropdown").slideUp("slow");
+            });
+        });
+
+
+        let btn = document.getElementById('jin');
+        btn.addEventListener('mouseenter', func1);
+        btn.addEventListener('mouseleave', func2);
+
+        function func1(e) {
+            jin.style.color = 'blue'
+            jin.style.fontSize = "17px";
+
+            console.log("thanks", e);
+            e.preventDefault();
+        }
+        function func2(e) {
+            jin.style.color = '#222424'
+            jin.style.fontSize = "15px";
+
+            console.log("thanks", e);
+            e.preventDefault();
+        }
+
+
+        $(document).ready(function () {
+            $("#registration").validate({
+                // Specify validation rules
+                rules: {
+                    firstname: "required",
+                    lastname: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5
+                    }
+                },
+
+            });
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

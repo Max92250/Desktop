@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myImage {
+            width: 100%;
+            height: 400px;
+            margin-top: 2px;
+
+
+
+
+            z-index: -1;
+            opacity: 2;
+        }
+
+        .asdf {
+            position: absolute;
+            bottom: 100px;
+            background: rgba(0, 0, 0, 0.5);
+            color: rgba(255, 192, 203, 0.835);
+            width: 80%;
+            display: block;
+            padding: 20px;
+        }
+
+        #max {
+            font-size: 17px;
+            position: relative;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <img id="kik" src="gg.png" style="width:100px">
+
+
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+    <button onclick="document.getElementById('kik').src='hh.png'">Turn on the light</button>
+
+
+
+    <button onclick="document.getElementById('kik').src='tik.jpg'">Turn off the light</button>
+    <br>
+    <br>
+
+    <div id="max">
+        <img id="myImage" onclick="changeImage()" src="img/lol.png">
+        <div class="asdf">
+            <h1 style="font-size: 14px;">Heading</h1>
+            <p style="font-size: 10px;">Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum
+                te
+                duo, eum cu recteque expetendis
+                neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine
+                molestiae, ad mutat oblique delicatissimi pro.</p>
+            <p style="font-size: 10px;">Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum
+                te
+                duo, eum cu recteque expetendis
+                neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine
+                molestiae, ad mutat oblique delicatissimi pro.</p>
+        </div>
+    </div>
+
+    <script>
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("tik")) {
+                image.src = "img/lol.png";
+            } else {
+                image.src = "img/tik.jpg";
+            }
+        }
+    </script>
+    </div>
+    <script>
+        function myFunction() {
+            document.getElementById("max").innerHTML = "Paragraph changed.";
+        }
+    </script>
+
+
+
+
+    <h2>JavaScript in Head</h2>
+
+    <p id="demo">A Paragraph.</p>
+    <p id="max">max chamling</p>
+    <p id="hulk"></p>
+    <script>
+        document.getElementById("hulk").innerHTML = "Welcome to my Homepage";
+    </script>
+
+
+    <button type="button" onclick="myFunction()">Try it</button>
+
+    <button type="button" onclick="Maxchamling()">Try it</button>
+
+    <br>
+    <br>
+    <script>
+        function Maxchamling() {
+
+            var x, y, z;  // Statement 1
+            x = 5;        // Statement 2
+            y = 6;        // Statement 3
+            z = x + y;    // Statement 4
+            document.getElementById("demo").innerHTML =
+                "The value of z is " + z + "max chamling";
+        }
+    </script>
+    <br>
+    <br>
+    <button type="button" onclick="document.write(9+1)">Click</button>
+    <br>
+    <br>
+
+    <script>
+      //  window.alert(5 + 6);
+
+    </script>
+    <br>
+
+    <button onclick="window.print()">Print this page</button>
+    <p id="rr">my name is max chaming </p>
+    <button type="buttom" onclick="steve()">sign</button>
+
+    <script>
+        function steve() {
+            var person = "John Doe", carName = "Volvo", price = 200;
+            document.getElementById("rr").innerHTML = carName + "<br>" + price;
+        }
+    </script>
+    <button type="button" onclick="document.getElementById('pp').innerHTML = Date()">
+        Click me to display Date and Time.</button>
+
+    <p id="pp"></p>
+    <p id="tt">steve smith </p>
+
+    <script>
+
+        myFunction();
+
+        function myFunction() {
+            var carName = "Volvo";
+
+            document.getElementById("tt").innerHTML = typeof carName + " " + carName;
+        }
+    </script>
+
+    <p id="oo"></p>
+
+    <script>
+        var x = 10;
+        // Here x is 10
+        {
+            let x = 2;
+            // Here x is 2
+        }
+
+        document.getElementById("oo").innerHTML = x;
+
+    </script>
+    <p id="hostel"></p>
+    <script>
+        var i = 1;
+        for (var i = 0; i < 100; i++) {
+            // some statements
+        }
+        // Here x is 10
+
+        document.getElementById("hostel").innerHTML = i;
+
+    </script>
+    <p id="ert">max chamling</p>
+    <button type="button" onclick="toCelsius()">Try it</button>
+
+
+
+    <script>
+        function toCelsius(f) {
+            return (5 / 9) * (f - 32);
+        }
+
+
+        document.getElementById("ert").innerHTML = toCelsius(45);
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

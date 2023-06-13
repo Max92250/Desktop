@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Finding HTML Elements by Tag Name</h2>
+
+    <div id="main">
+        <p>The DOM is very useful.</p>
+        <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+    </div>
+
+    <p id="demo"></p>
+
+    <script>
+        var x = document.getElementById("main");
+        var y = x.getElementsByTagName("p");
+        document.getElementById("demo").innerHTML =
+            'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+    </script>
+    <h2>Finding HTML Elements by Class Name</h2>
+
+    <p>Hello World!</p>
+
+    <p class="intro">The DOM is very useful.</p>
+    <p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+
+    <p id="max"></p>
+
+    <script>
+        var y = document.getElementsByClassName("intro");
+        document.getElementById("max").innerHTML =
+            'The first paragraph (index 0) with class="intro": ' + y[0].innerHTML;
+    </script>
+
+    <form id="frm1" action="/action_page.php">
+        First name: <input type="text" name="fname" value="Donald"><br>
+        Last name: <input type="text" name="lname" value="Duck"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>Click "Try it" to display the value of each element in the form.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="papa"></p>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("frm1")
+            var text = "max chamling" + "<br>" + "steve" + "<br>";
+
+
+            var i;
+            for (i = 0; i < x.length; i++) {
+                text += x.elements[i].value + "<br>";
+            }
+            document.getElementById("papa").innerHTML = text;
+        }
+    </script>
+    <script>
+        const marks = [34, 67, 89, 67, 456];
+        const fruits = ['orange', 'apple', 'pineapple'];
+        const mixed = ['max chamling', 45, 67, 'steve smith', [2, 3]];
+        const ash = new Array(45, 56, 78, 'david rai');
+        console.log(ash);
+        console.log(mixed);
+        console.log(fruits[0, 1]);
+    </script>
+
+
+
+</body>
+
+
+</html>

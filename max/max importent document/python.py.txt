@@ -1,0 +1,68 @@
+python C:/Users/maxra/PycharmProjects/project1/steve.py
+from turtle import Turtle,Screen
+
+def draw_square(some_turtle):
+    for _ in range(4):
+        some_turtle.forward(200)
+        some_turtle.right(90)
+
+def draw_art():
+    brad=Turtle(shape="turtle")
+    brad.color("yellow")
+    brad.pensize(2)
+    brad.speed(0)
+    for _ in range(36):
+        draw_square(brad)
+        brad.right(10)
+      #turtle angle
+    angie=Turtle(shape="turtle")
+    angie.color("blue")
+    angie.pensize(2)
+    angie.speed(0)
+    size = 1
+    for _ in range(300):
+        angie.forward(size)
+        angie.right(91)
+        size+=1
+
+window =Screen()
+window.bgcolor("black")
+
+draw_art()
+
+window.exitonclick()
+
+
+
+img = PhotoImage(file='img/lala.png')
+next_ = PhotoImage(file = 'img/ooo.png')
+prev = PhotoImage(file='img/prev.png')
+play = PhotoImage(file='img/play.png')
+pause = PhotoImage(file='img/pause.png')
+
+
+
+
+
+    def track_widgets(self):
+        self.canvas=tk.LabelFrame(self.track,image=img)
+        self.canvas.configure(width=400,height=240)
+        self.canvas.grid(row=0,column=0)
+
+        self.canvas = tk.LabelFrame(self.track,font=("times new roman", 15, "bold"),bg='white',fg='dark blue')
+        self.canvas['text'] = 'Musicxy MP3 Player'
+        self.canvas.configure(width=30, height=1)
+        self.canvas.grid(row=1, column=0)
+
+
+
+    def control_widgets(self):
+        pass
+    def tracklist_widget(self):
+        pass
+
+
+
+
+
+__

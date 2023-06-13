@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *,
+  body {
+    left: 0;
+    right: 0;
+
+  }
+
+  .div {
+
+    width: 250px;
+    list-style-type: none;
+
+
+
+    background-color: brown;
+    height: 400px;
+    padding-top: 20px;
+
+
+  }
+
+  li {
+
+
+
+    width: 100%;
+    margin-top: 40px;
+    padding: 6px 0px;
+    text-align: center;
+
+
+    background-color: burlywood;
+  }
+
+  .gog.li {
+
+
+    background-color: cadetblue;
+
+
+    z-index: 0.3;
+
+
+
+  }
+
+  .button {
+    width: 60px;
+    margin-left: 20px;
+    background-color: rgb(240, 187, 117);
+    border-style: none;
+    outline: none;
+
+  }
+
+
+
+  .flex {
+    display: flex;
+
+  }
+
+  .nav {
+    position: relative;
+    width: 300px;
+    margin-left: 30px;
+    background-color: darkcyan;
+    border-radius: 10px;
+    height: 20vh;
+
+    box-shadow: rgb(158, 92, 92) 0px 54px 55px, rgb(94, 69, 69) 0px -12px 30px, #fff 0px 4px 6px;
+  }
+
+  .random {
+    --tr: 1;
+    --op: .1;
+
+
+
+
+
+  }
+
+  .design {
+    display: block;
+
+    background: blue;
+    position: absolute;
+
+    opacity: var(--op);
+    transition: .3s;
+  }
+
+  .design--1,
+  .design--2,
+  .design--3 {
+    width: 1px;
+    height: 100%;
+  }
+
+  .design--1,
+  .design--2 {
+    top: 0;
+    transform: translateY(calc((var(--tr) - (var(--tr) * 2)) * 1%));
+  }
+
+  .design--1 {
+    left: 20%;
+  }
+
+  .design--2 {
+    left: 80%;
+  }
+
+  .design--3,
+  .design--4 {
+    bottom: 0;
+    transform: translateY(calc((var(--tr) + (var(--tr) - var(--tr))) * 1%))
+  }
+
+  .design--3 {
+    left: 24%;
+  }
+
+  .design--4 {
+    left: 76%;
+  }
+
+  .design--5,
+  .design--6,
+  .design--7,
+  .design--8 {
+    width: 100%;
+    height: 1px;
+  }
+
+  .design--5,
+  .design--6 {
+    left: 0;
+    transform: translateX(calc((var(--tr) - (var(--tr) * 2)) * 0%));
+  }
+
+  .design--5 {
+    top: 41%;
+  }
+
+  button:hover +.random {
+    --tr: 10;
+    --op: .7;
+  }
+
+  button {
+    margin-top: -100px;
+    margin-left: 100px;
+    font-family: inherit;
+    font-weight: bold;
+    color: var(--white-1);
+
+    letter-spacing: 2px;
+
+    padding: 9px 20px;
+    border: 1px solid var(--grey);
+    border-radius: 1000px;
+    background: transparent;
+    transition: .3s;
+
+    cursor: pointer;
+  }
+
+  button:hover,
+  button:focus {
+    color: var(--primary);
+    background: hsla(var(--hue), 25%, 10%, .2);
+    border-color: currentColor;
+  }
+
+  button:active {
+    transform: translate(2px);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+
+  body {
+    background-color: cornflowerblue;
+  }
+
+  .wrapper {
+    max-width: 450px;
+    margin: 150px auto;
+
+  }
+
+  .search-input input {
+    height: 55px;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    border-radius: 3px;
+
+  }
+
+
+  .wrapper.search-input {
+
+
+    background-color: #fff;
+    width: 100%;
+
+
+  }
+
+  .search-input .autocom-box {
+    /* padding: 10px 8px;*/
+    overflow-y: auto;
+    padding: 0px;
+
+    max-height: 280px;
+    pointer-events: none;
+
+
+
+  }
+
+  .search-input .autocom-box li {
+    list-style: none;
+    padding: 8px 12px;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+    display: none;
+  }
+
+  .search-input.active .autocom-box {
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .search-input.active .autocom-box li {
+    display: block;
+  }
+
+  .autocom-box li:hover {
+    background-color: darkgray;
+  }
+
+
+
+  #feature {
+    width: 200px;
+    height: 150px;
+    margin-left: 50%;
+    position: relative;
+    transform: translate(-50%);
+
+  }
+
+  .thumb {
+    width: 100px;
+    height: 80px;
+    opacity: 0.5;
+    border: 1px solid blue;
+    margin-left: 5px;
+  }
+
+  .thumb:hover {
+    opacity: 1;
+  }
+
+  .hang {
+    width: 400px;
+    top: 10px;
+    overflow: hidden;
+    background-color: burlywood;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+
+
+  }
+
+  .active {
+    opacity: 1;
+  }
+
+  #slide-wrapper {
+    max-width: 500px;
+    display: flex;
+    min-height: 100px;
+    margin-left: 20px;
+
+    align-items: center;
+
+  }
+
+  #slider {
+    width: 300px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+
+  }
+  .lol{
+    width:300px;
+    height:100px;
+    margin:0 auto;
+    background-color: burlywood;
+    text-align: center;
+    position: relative;
+    display: flex;
+  }
+  .ol{
+    width:100%;
+    height:100%;
+    position: absolute;
+    background-color: rgb(68, 109, 185);
+    top:0;
+    left:0;
+  }
+  
+
+
+</style>
+
+<body>
+ <div class="lol">
+   <div class="ol">
+     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ad suscipit assumenda?
+   </div>
+   <div class="ol">
+     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero impedit dignissimos voluptas?
+   </div>
+ </div>
+   
+<div style="margin-top:100px;">
+    <input type="text" class="username">
+    <input type="text" class="password">
+    <button class="submit" >clickme</button>
+    </div>
+  
+  <div class="hang">
+    <img id="feature" src="img/apple.png">
+
+    <div id="slide-wrapper">
+      <div class="sideleft" style="font-size: 20px;font-weight: 600;color:darkorchid;background-color: darkslategray;width:25px;
+      border-radius: 50%;padding-left: 5px;">
+        <</div>
+
+          <div id="slider">
+            <div class="thumb active">
+              <img src="img/fin.jpg">
+            </div>
+           
+            <img class="thumb" src="img/kik.png">
+            <img class="thumb" src="img/lo.png">
+            <img class="thumb" src="img/max-6.png">
+            <img class="thumb" src="img/scale.png">
+            <img class="thumb" src="img/sky.png">
+          </div>
+          <div class="sideright"
+            style="font-size: 20px;font-weight: 600;color:darkorchid;margin-left: 5px;background-color: darkslategray;border-radius:50%;width:25px;padding-left: 8px;">
+            ></div>
+
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="search-input">
+        <input type="text" class="ty" placeholder="type to search...">
+        <div class="autocom-box">
+          <li>how form in html & css</li>
+          <li>how to learn html & css</li>
+          <li>how to learn javascript</li>
+          <li>how became freelancher</li>
+          <li>how to became a web designer</li>
+          <li>how to learn javascript</li>
+          <li>how to became a web designer</li>
+        </div>
+      </div>
+    </div>
+
+    <input type="text" name="" class="ty" id="display" disabled>
+    <input type="button" value="c" class="ty">
+
+
+    <div class="row">
+      <input type="button" value="7">
+      <input type="button" value="7">
+      <input type="button" value="7">
+      <input type="button" value="+">
+
+
+
+
+    </div>
+    <div class="row">
+      <input type="button" class="t" value="1">
+      <input type="button" class="t" value="2">
+      <input type="button" class="t" value="3">
+      <input type="button" class="t" value="-">
+
+
+
+
+    </div>
+    <div class="row">
+      <input type="button" class="t" value=".">
+      <input type="button" class="t" value="0">
+      <input type="button" class="t" value="=">
+      <input type="button" class="t" value="/">
+
+
+
+
+    </div>
+    <div class="end"></div>
+    <div class="start"></div>
+
+    <h2>hello world</h2>
+    <div class="max" style="color:red">
+    </div>
+
+
+    <div class="flex">
+
+      </ul>
+
+      <div class="div">
+        <li class=" gog ">
+          <a>max</a>
+        </li>
+        <li class="gog">
+          <a>rai</a>
+
+        </li>
+        <li class="gog">
+          <a>chamling</a>
+
+        </li>
+        <div class="slide"></div>
+
+
+
+      </div>
+      <div class="nav">
+
+        <div class="nav1">
+          <p class="op">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam accusantium magnam
+            recusandae!
+          </p>
+          <input type="checkbox" class="po" id="checkbox" name="check" class="check" value="rai"
+            onclick="onlyOne(this)">
+          <input type="checkbox" class="check" class="po" name="check" value="tin" onclick="onlyOne(this)">
+        </div>
+        <button class="butto">Book</button>
+        <div class="random">
+          <div class="design design--1"></div>
+          <div class="design design--2"></div>
+          <div class="design design--3"></div>
+          <div class="design design--4"></div>
+          <div class="design design--5"></div>
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+
+    <script src="max.js"></script>
+    <script src="js/steve.js"></script>
+</body>
+
+</html>

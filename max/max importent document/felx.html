@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex tutorial</title>
+    <style>
+        .container{
+            height:544px;
+            width:100%;
+            border:2px solid black;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-flow: row-reverse wrap;
+            justify-content: center;
+            justify-content: space-between;
+            justify-content: space-around;
+            align-items: center;
+            align-items: flex-end;
+            align-items: flex-start;
+            align-items: stretch;
+
+
+
+
+        }
+        #item-1{
+            order: 2;
+            flex-grow:3;
+        }
+        .item{
+            width:150px;
+            height:150px;
+            background-color: tomato;
+            border:2px solid red;
+            margin:10px;
+            padding:3px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>this is flex tutorial</h1>
+    <div class=container>
+        <div class="item" id="item-1">first class</div>
+        <div class="item" id="item-2">second class</div>
+        <div class="item" id="item-3">third class</div>
+        <div class="item" id="item-4">fourth class</div>
+        <div class="item" id="item-5">fifth class</div>
+        <div class="item" id="item-6">sixth class</div>
+    </div>
+
+    
+</body>
+</html>

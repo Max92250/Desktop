@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style-type:none ;
+    text-decoration: none;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+
+
+p,a{
+    font-family: 'Roboto', sans-serif;
+
+}
+img-responsive{
+    display: block;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container{
+    max-width: 1330px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right:15px;
+
+}
+.clear{
+    clear: both;
+}
+
+
+section#sidebar{
+    width:20%;
+    
+    background-image: linear-gradient(rgba(155,60,183,0.9),rgba(255,57,111,0.9)), url('../img/jip.jpg');
+    position: fixed;
+    top:0;
+    left:0;
+    color:#fff;
+    height:100%;
+}
+section#main-content{
+    width:80%;
+    float:right;
+    background-color: blue;
+}

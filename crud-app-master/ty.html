@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="input">
+    <input type="text" name="" id="display" disabled  >
+    <input type="button"  value="c" class="cancle_btn">
+  </div>
+  
+    <div class="row">
+      <input type="button" value="7">
+      <input type="button" value="7"> 
+       <input type="button" value="7">
+       <input type="button" value="+">
+  
+      
+  
+  
+    </div>
+    <div class="row">
+      <input type="button" value="1">
+      <input type="button" value="2"> 
+       <input type="button" value="3">
+       <input type="button" value="-">
+  
+      
+  
+  
+    </div>
+    <div class="row">
+      <input type="button" value=".">
+      <input type="button" value="0"> 
+       <input type="button" value="=">
+       <input type="button" value="/">
+  
+      
+  
+  
+    </div>
+    <script>
+        const display = document.getElementById('display')
+const input = document.querySelectorAll("input");
+let value = "";
+input.forEach
+    ((e) => {
+        e.addEventListener("click", (event) => {
+            if(event.target.value == "=") {
+                if (value.length != 0) {
+                    let newval = eval(value);
+                    value = newval;
+                    display.value = value;
+                }else if(event.target.value == "c") {
+                    value = "";
+                    display.value = value;
+
+                }else{
+                    value += event.target.value;
+                    display.value = value;
+                }
+            }
+        })
+    })
+
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *,
+    body {
+        left: 0;
+        right: 0;
+
+    }
+
+    .div {
+
+        width: 250px;
+        list-style-type: none;
+
+
+
+        background-color: brown;
+        height: 400px;
+        padding-top: 20px;
+
+
+    }
+
+    li {
+
+
+
+        width: 100%;
+        margin-top: 40px;
+        padding: 6px 0px;
+        text-align: center;
+
+
+        background-color: burlywood;
+    }
+
+    .gog.li {
+
+
+        background-color: cadetblue;
+
+
+        z-index: 0.3;
+
+
+
+    }
+
+    .button {
+        width: 60px;
+        margin-left: 20px;
+        background-color: rgb(240, 187, 117);
+        border-style: none;
+        outline: none;
+
+    }
+
+   
+
+    .flex {
+        display: flex;
+
+    }
+
+    .nav {
+        position: relative;
+        width: 300px;
+        margin-left: 30px;
+        background-color: darkcyan;
+        border-radius: 10px;
+        height: 20vh;
+        
+        box-shadow: rgb(158, 92, 92) 0px 54px 55px, rgb(94, 69, 69) 0px -12px 30px, #fff 0px 4px 6px;
+    }
+
+    .random {
+        --tr: 1;
+        --op: .1;
+        
+    
+       
+
+
+    }
+
+    .design {
+        display: block;
+
+        background: blue;
+        position: absolute;
+
+        opacity: var(--op);
+        transition: .3s;
+    }
+
+    .design--1,
+    .design--2,
+    .design--3
+     {
+        width: 1px;
+        height: 100%;
+    }
+
+    .design--1,
+    .design--2 {
+        top: 0;
+        transform: translateY(calc((var(--tr) - (var(--tr) * 2)) * 1%));
+    }
+    
+.design--1 {
+  left: 20%;
+}
+
+.design--2 {
+  left: 80%;
+}
+
+.design--3,
+.design--4 {
+  bottom: 0;
+  transform: translateY(calc((var(--tr) + (var(--tr) - var(--tr))) * 1%))
+}
+
+.design--3 {
+  left: 24%;
+}
+
+.design--4 {
+  left: 76%;
+}
+
+.design--5,
+.design--6,
+.design--7,
+.design--8 {
+  width: 100%;
+  height: 1px;
+}
+
+.design--5,
+.design--6 {
+  left: 0;
+  transform: translateX(calc((var(--tr) - (var(--tr) * 2)) * 0%));
+}
+
+.design--5 {
+  top: 41%;
+}
+button:hover+.random
+{
+  --tr: 10;
+  --op: .7;
+}
+button {
+    margin-top: -100px;
+    margin-left: 100px;
+  font-family: inherit;
+  font-weight: bold;
+  color: var(--white-1);
+
+  letter-spacing: 2px;
+
+  padding: 9px 20px;
+  border: 1px solid var(--grey);
+  border-radius: 1000px;
+  background: transparent;
+  transition: .3s;
+
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  color: var(--primary);
+  background: hsla(var(--hue), 25%, 10%, .2);
+  border-color: currentColor;
+}
+
+button:active {
+  transform: translate(2px);
+}
+
+
+
+</style>
+
+<body>
+  <input type="text" name="" id="display" disabled  >
+  <input type="button"  value="c" class="cancle_btn">
+
+
+  <div class="row">
+    <input type="button" value="7">
+    <input type="button" value="7"> 
+     <input type="button" value="7">
+     <input type="button" value="+">
+
+    
+
+
+  </div>
+  <div class="row">
+    <input type="button" value="1">
+    <input type="button" value="2"> 
+     <input type="button" value="3">
+     <input type="button" value="-">
+
+    
+
+
+  </div>
+  <div class="row">
+    <input type="button" value=".">
+    <input type="button" value="0"> 
+     <input type="button" value="=">
+     <input type="button" value="/">
+
+    
+
+
+  </div>
+
+    <h2>hello world</h2>
+    <div class="max" style="color:red">
+    </div>
+
+
+    <div class="flex">
+
+        </ul>
+
+        <div class="div">
+            <li class=" gog li">
+                <a>max</a>
+            </li>
+            <li class="gog">
+                <a>rai</a>
+
+            </li>
+            <li class="gog">
+                <a>chamling</a>
+
+            </li>
+            <div class="slide"></div>
+
+
+
+        </div>
+        <div class="nav">
+
+            <div class="nav1">
+                <p class="op">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam accusantium magnam
+                    recusandae!
+                </p>
+                <input type="checkbox" class="po" id="checkbox" class="check" value="rai" onclick="onlyOne(this)">
+                <input type="checkbox" class="check" class="po" value="tin" onclick="onlyOne(this)">
+            </div>
+            <button class="butto">Book</button>
+            <div class="random">
+                <div class="design design--1"></div>
+                <div class="design design--2"></div>
+                <div class="design design--3"></div>
+                <div class="design design--4"></div>
+                <div class="design design--5"></div>
+            </div>
+           
+
+        </div>
+
+    </div>
+
+
+    <script src="max.js"></script>
+
+</body>
+
+</html>class Car {
+    constructor(name, year) {
+        this.name = name;
+        this.year = year;
+
+    }
+    age = function () {
+        let date = new Date();
+        console.log(date.getFullYear() - this.year);
+    }
+    max(steve, max) {
+        console.log(this.name = steve, this.year = max);
+    }
+}
+
+let myCar = new Car("Ford", 2014);
+myCar.age();
+myCar.max('max', 'rai');
+
+
+
+
+const url = 'https://api.github.com/users/john-smilga/followers?per_page=100'
+
+async function fetchFollowers() {
+    const max = await fetch(url)
+    const data = await max.json()
+    return data
+
+}
+console.log(fetchFollowers());
+const ax = document.querySelector('.max')
+function display(followers) {
+    const newFollowers = followers
+        .map((person) => {
+
+            return `
+        ${person.login}
+        ${person.avatar_url}
+        <br>
+                `
+        })
+
+
+    const rt = Object.entries(newFollowers)
+    ax.innerHTML = rt;
+}
+async function init() {
+    const ma = await fetchFollowers()
+
+    pages = display(ma)
+}
+init();
+
+
+
+tim = ['max', 'chamling', 'rai']
+
+const steve = tim.map(function (item) {
+    id = item + 'steve';
+    return id;
+})
+console.log(steve);
+
+const max = [{ firstname: "Malcom", lastname: "Reynolds" },
+{ firstname: "Kaylee", lastname: "Frye" },
+{ firstname: "Jayne", lastname: "Cobb" }
+];
+
+
+console.log(max);
+const jo = document.querySelector(".max");
+
+const rai = max.map(function (item) {
+
+    return `
+        <div>${item.firstname}</div>
+        `
+});
+
+console.log(rai)
+
+
+const li = document.querySelectorAll(".gog");
+const slide = document.querySelector(".slide")
+const button = document.querySelector(".button")
+
+li.forEach(function (ma) {
+    ma.addEventListener('click', function () {
+
+
+        let j = 0;
+        while (j < li.length) {
+            li[j++].className = 'gog';
+        }
+        ma.classList.add('li');
+
+
+
+
+    })
+
+
+
+})
+function onlyOne(b) {
+    var x = document.querySelectorAll('.check');
+
+    x.forEach(function (item) {
+
+
+
+
+        if (item !== b) item.checked = false;
+
+    })
+
+}
+
+
+const po = document.querySelector('.po')
+
+
+po.addEventListener('click', function () {
+    if (document.getElementById("checkbox").checked) {
+        return document.getElementsByClassName("op")[0].style.textDecoration = "line-through"
+    }
+    else {
+        return document.getElementsByClassName("op")[0].style.textDecoration = "none";
+    }
+})
+
+const disply = document.getElementById('display')
+const input = document.querySelectorAll("input");
+let value = "";
+input.forEach
+    ((e) => {
+        e.addEventListener("click", (event) => {
+            if(event.target.value == "=") {
+                if(value.length != 0) {
+                    let newval = eval(value);
+                    value = newval;
+                    disply.value = value;
+                }
+                else if (event.target.value == "c") {
+                    value = "";
+                    disply.value = value;
+
+                } else {
+                    value += event.target.value;
+                    disply.value = value;
+                }
+            }
+        })
+    })
+
+
+
+
+

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="str.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<script>
+    $(document).ready(function () {
+        $(".uy").mouseenter(function () {
+            $(".strain").css("-webkit-animation-name", "rotate-strain");
+
+
+
+            $(".uy").css("transform", "translateX(12px)");
+
+        });
+    });
+    $(document).ready(function () {
+        $(".uy").mouseleave(function () {
+            $(".strain").css("-webkit-animation-name", "rotate-strain");
+            $(".uy").css("transform", "rotate(120deg)");
+
+
+        });
+    });
+    $(document).ready(function () {
+        $(".rt").mouseenter(function () {
+
+            $(".uy").css("transform", "rotate(10deg)");
+
+
+
+
+        });
+    });
+    $(document).ready(function () {
+        $(".rt").mouseleave(function () {
+
+            $(".uy").css("transform", "none");
+            $(".strain").css("-webkit-animation-name", "none");
+
+
+
+
+        });
+    });
+    $(document).ready(function () {
+        $(".io").click(function () {
+            $(".nav-link").css("width", "140px");
+            $(".io").css("opacity", "0");
+
+
+
+            $(".rt").css("marginRight", "140px");
+
+
+
+
+
+
+        });
+    });
+
+    $(document).ready(function () {
+        $(".jo").click(function () {
+            $(".nav-link").css("width", "0px");
+            $(".io").css("opacity", "1");
+            $(".rt").css("marginRight", "0px");
+
+
+
+
+
+
+        });
+    });
+
+
+    $(document).ready(function () {
+        $(".ty").mouseenter(function () {
+            $(".lo").css("display", "block");
+            $(".ol").css("display", "none");
+
+
+
+
+
+
+
+        });
+    });
+    $(document).ready(function () {
+        $(".ty").mouseleave(function () {
+            $(".lo").css("display", "none");
+            $(".ol").css("display", "block");
+
+
+
+
+
+
+
+        });
+    });
+
+</script>
+
+<body>
+    <section class="header">
+
+        <div class="fixed">
+
+            <div class="max">
+                <a href="max.html"><img src="img/kik.png"></a>
+            </div>
+
+            <div>
+                <li class="fas fa-bars io"></li>
+            </div>
+
+
+            <div class="nav-link">
+
+
+
+                <ul>
+                    <li class="jo"><a style="color:black;font-size:34px;">x</a></li>
+
+                    <li><a href="max.html" class="yu">HOME</a></li>
+                    <li><a href="#" class="yu">ABOUT</a></li>
+                    <li><a href="#" class="yu">COURSE</a></li>
+                    <li><a href="max.html" class="yu">BLOG</a></li>
+                    <li><a href="#" class="yu">CONTENT</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-box ">
+
+
+            <div class="rt">
+
+
+                <h1>World's biggest University</h1>
+                <p>Making website is now one of the easiest thing in the word. you just need to
+                    learn
+                    html,css,<br>javascript and you are good to go.</p>
+                <a href="#" class="hero-btn">Visit Us To Know More</a>
+
+            </div>
+            <div class="uy" style="padding-left:100px;width:300px;">
+
+                <div class="strain"></div>
+                <div class="strain"></div>
+                <div class="strain"></div>
+                <div class="strain"></div>
+                <div class="strain"></div>
+                <div class="strain"></div>
+                <div class="strain"></div>
+                <div class="strain"></div>
+                <div class="strain"></div>
+                <div class="strain"></div>
+                <div class="strain"></div>
+                <div class="strain"></div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <div class="inter">
+        <div class="ii">
+            <div class="card"
+                style="float: right;background-image: linear-gradient(rgba(4, 9, 30, 0.479),rgba(0, 0, 0, 0.082)),url(img/images\ \(1\).jpg);">
+
+                <span>Jin(BTS)</span>
+
+
+                <div class="social-media-list">
+                    <div>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google"></i></a></li>
+                    </div>
+                    <div style="margin-top: 70px;position: relative;margin-left: 5px;">
+                        <p class="op" style="font-size: 6px;">Kim Seok-jin, also known by his stage na
+                            the South Korean boy band BTS since June 2013. Kim has co-written and released three solo
+                            tracks
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="jj">
+            <div class="card " id="lo"
+                style=" background-image: linear-gradient(rgba(4, 9, 30, 0.664),rgba(0, 0, 0, 0.5)),url(img/rr.jpg);">
+
+                <span>V(BTS)</span>
+
+                <div class="social-media-list" style="display: flex;">
+                    <div>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google"></i></a></li>
+                    </div>
+                    <div style="margin-top: 70px;position: relative;margin-left: 5px;">
+                        <p class="op">Kim Seok-jin, also known by his stage name Jin, is a
+                            South
+                            Korean
+                            singer, songwriter, and member of
+                            the South Korean boy band BTS since June 2013. Kim has co-written and released three solo
+                            tracks
+                            .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kk">
+            <div class="card"
+                style="float:left;background-image: linear-gradient(rgba(4, 9, 30, 0.664),rgba(0, 0, 0, 0.5)),url(img/ll.jpg);">
+
+                <span>jungkook(BTS)</span>
+
+                <div class="social-media-list" style="display: flex;">
+                    <div>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google"></i></a></li>
+                    </div>
+                    <div style="margin-top: 70px;position: relative;margin-left: 5px;">
+                        <p class="op">Kim Seok-jin, also known by his stage name Jin, is a
+                            South
+                            Korean
+                            singer, songwriter, and member of
+                            the South Korean boy band BTS since June 2013. Kim has co-written and released three solo
+                            tracks
+                            .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="astro" style="background-color: rgba(0, 0, 0, 0.698);height:100vh;">
+        <div class="tro" style="background:linear-gradient(rgba(0, 0, 0, 0.287),rgba(0, 0, 255, 0.219));width:80%;">
+
+            <div class="hand">
+                <p>laptop</p>
+            </div>
+
+            <nav class="we">
+                <li><a class="ty">macbook</a></li>
+                <li><a class="ty">dell</a></li>
+                <li><a class="ty">hp</a></li>
+                <li><a class="ty">asus</a></li>
+            </nav>
+            <div class="go">
+                <div class="og">
+                    <div class="goo">
+                        <img src="img/hor.jpg">
+                        <img src="img/images.jpg">
+                        <img src="img/hor.jpg">
+                    </div>
+
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    </div>
+    <div style="background:red;height:100vh;">
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

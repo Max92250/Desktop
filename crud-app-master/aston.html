@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .searchBox {
+        width: 200px;
+        position: relative;
+        left: 40px;
+        top: 50px;
+
+
+    }
+
+    .searchInput {
+        border: none;
+        background: teal;
+        outline: none;
+        float: right;
+
+        color: white;
+        font-size: 16px;
+        transition: 0.4s;
+        line-height: 40px;
+        width: 0px;
+        padding: 0;
+    }
+
+    .searchBox:hover .searchInput {
+        width: 200px;
+        border-radius: 5px;
+        padding: 0 6px;
+        height: 40px;
+
+
+    }
+
+    .searchBox:hover .searchButton {
+        background-color: wheat;
+        color: wheat;
+
+    }
+
+    .searchButton {
+        position: absolute;
+        top: 0px;
+
+        background-color: slategray;
+        right: 0px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        border: none;
+
+        border-style: none;
+        outline: none;
+
+
+    }
+</style>
+
+<body>
+    <div class="searchBox">
+
+        <input class="searchInput" type="text"  id="ty" name="" placeholder="search..">
+        <button class="searchButton" href="#" style="color:red">
+
+            max
+
+        </button>
+
+</div>
+        
+        Enter your name: <input type="text" id="fname"  >
+
+        <p>My name is: <span id="demo"></span></p>
+        
+        <script>
+        const gh =document.querySelector("#fname")
+        const gt=document.querySelector("#demo")
+        gh.addEventListener("input",function(){
+
+    
+            var x = gh.value;
+            console.log(x);
+        
+          gt.innerHTML = x;
+        
+        });
+      
+        </script>
+
+</body>
+
+</html>

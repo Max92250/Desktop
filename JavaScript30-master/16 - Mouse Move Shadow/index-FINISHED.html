@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Shadow</title>
+</head>
+
+<body>
+
+  <div class="hero">
+    <h1 contenteditable>🔥WOAH!</h1>
+  </div>
+
+  <style>
+    html {
+      color: black;
+      font-family: sans-serif;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .hero {
+      height: 50rem;
+      width: 30rem;
+      background-color: burlywood;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+
+    }
+
+    h1 {
+      text-shadow: 10px 10px 0 rgba(0, 0, 0, 1);
+      font-size: 100px;
+    }
+  </style>
+
+  <script>
+    const hero = document.querySelector('.hero');
+    const text = hero.querySelector('h1');
+    const walk = 500; // 500px
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    function shadow(e) {
+
+
+
+      isDown = true;
+      startX = e.pageX - hero.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+
+
+    }
+
+    hero.addEventListener('mouseenter', shadow);
+    hero.addEventListener('mouseleave', function () {
+      text.style.textShadow = 'none';
+    });
+
+    hero.addEventListener('mousemove', (e) => {
+    if (!isDown) return;  // stop the fn from running
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+  </script>
+</body>
+
+</html>

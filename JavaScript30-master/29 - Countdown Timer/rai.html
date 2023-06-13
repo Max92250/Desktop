@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Font Awesome 5 Icons</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+
+</head>
+<style>
+    body {
+        margin: 0;
+        left: 0;
+    }
+
+    .wrapper {
+        display: flex;
+        align-items: stretch;
+
+    }
+
+    #sidebar {
+        width: 200px;
+        min-height: 100vh;
+
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 10px;
+
+
+
+    }
+
+    #sidebar.sdf {
+        width: 100px;
+    }
+
+    #sidebar.active {
+        margin-left: -250px;
+    }
+
+    @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: rgba(0, 0, 0, 0.438);
+    }
+
+    p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1em;
+        font-weight: 300;
+        line-height: 1.7em;
+        color: darkslategray
+    }
+
+    a,
+    a:hover,
+    a:focus {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    #sidebar {
+        /* don't forget to add all the previously mentioned styles here too */
+        background: rgba(0, 0, 0, 0.801);
+
+        color: #fff;
+        transition: all 0.3s;
+        overflow: hidden;
+
+
+    }
+
+    #sidebar .sidebar-header {
+        margin-left: 12px;
+
+    }
+
+    #sidebar ul.components {
+        padding: 20px 0;
+        border-bottom: 1px solid #47748b;
+    }
+
+    #sidebar ul p {
+        color: #fff;
+        padding: 10px;
+    }
+
+    #sidebar>ul>li>a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+        margin-left: 8px;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        display: flex;
+        margin-bottom: 1rem;
+
+
+    }
+
+
+    .content {
+        margin-top: 10px;
+    }
+
+    .ty {
+        display: block;
+    }
+
+
+
+    .red .ty {
+
+        background: #e9967afb;
+    }
+
+
+
+    #rt {
+        color: dodgerblue;
+        font-size: 25px;
+
+        margin-left: 1rem;
+
+    }
+
+    #rt.tr {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .op {
+        margin-left: 15px;
+    }
+
+    .op.po {
+        display: none;
+    }
+
+    .collapse {
+        list-style-type: none;
+        margin-left: -40px;
+        display: none;
+
+
+
+
+
+
+    }
+
+    .collapse li a:hover {
+        background-color: darkslategray;
+    }
+
+    .side .collapse {
+        display: block;
+    }
+
+    .collapse li a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid black;
+
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Bootstrap Sidebar</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Dummy Heading</p>
+                <li class=" list " data-rating='1'>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="ty red "><i
+                            class="	fa fa-home" id='rt'></i>
+                        <div class="op">Home</div>
+                    </a>
+                    <ul class="collapse">
+                        <li><a href="#">login </a></li>
+                        <li><a href="#">sign up</a></li>
+                        <li><a href="#">change</a></li>
+                    </ul>
+
+                </li>
+                <li class="list" data-rating="2">
+                    <a href="#" class="ty">
+                        <i class="fa fa-cloud" id='rt'></i>
+                        <div class="op">About</div>
+                    </a>
+                    <ul class="collapse">
+                        <li><a href="#">astro </a></li>
+                        <li><a href="#">sign up</a></li>
+                        <li><a href="#">change</a></li>
+                    </ul>
+                </li>
+                <li class="list" data-rating="3">
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="ty"><i
+                            class="fa fa-qrcode" id="rt"></i>
+                        <div class="op">Page</div>
+                    </a>
+
+                </li>
+                <li class="list" data-rating="4">
+                    <a href="#" class="ty"><i class='fa fa-address-card-o' id="rt"></i>
+                        <div class="op">Profile</div>
+                    </a>
+                </li>
+                <li class="list" data-rating="5">
+                    <a href="#" class="ty"><i class='	fa fa-database	
+                        ' id="rt"></i>
+                        <div class="op">Profilecontent</div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <button class="cont">max</button>
+
+
+            <form id="form">
+                <div class="message" style="color:red"></div>
+                <label for="fname">First name:</label><br>
+                <input type="text" class="fname" name="fname"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" class="lname" name="lname"><br><br>
+                <div class="short"></div>
+                <button class="submit">submit</button>
+            </form>
+
+        </div>
+
+
+        <script>
+            const form = document.querySelector('#form');
+            const lname = document.querySelector('.lname');
+            const fname = document.querySelector('.fname');
+            const message = document.querySelector('.message')
+            const short = document.querySelector('.short')
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                
+
+                const press = [];
+
+
+
+
+                if (fname.value === '' || fname.value === null) {
+                    press.push("you havent fill  yet");
+
+                }
+
+
+                if (press.length > 0) {
+                    message.innerHTML = press.join(',')
+
+                }
+
+             const pattern=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+                
+                if (lname.value.match(pattern)) {
+                      
+                    return true;
+                }
+                else {
+                    alert("not accepted");
+                    return false;
+                }
+
+
+
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            const cont = document.querySelector('.cont')
+            const sidebar = document.querySelector('#sidebar')
+
+
+
+            cont.addEventListener('click', function () {
+
+                sidebar.classList.toggle('sdf');
+                const to = document.querySelectorAll('#rt')
+                to.forEach(function (opp) {
+                    opp.classList.toggle('tr')
+                })
+                const op = document.querySelectorAll('.op')
+                op.forEach(function (ty) {
+                    ty.classList.toggle('po')
+                })
+
+            })
+
+
+
+
+            const list = document.querySelectorAll('.list');
+            list.forEach(function (max) {
+
+
+                max.addEventListener('mouseenter', function () {
+                    let rating = this.getAttribute("data-rating")
+
+                    let j = 0;
+                    while (j < list.length) {
+                        list[j++].className = 'list';
+
+
+                    }
+
+
+
+
+
+
+
+
+                    max.classList.add('red');
+
+                });
+
+
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+
+</body>
+
+</h

@@ -1,0 +1,122 @@
+
+    
+
+
+ 
+.section{
+    height:100px;
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+    
+    
+    margin:6px;
+    padding:100px 40px;
+    background:rgba(255,255,255,0.2);
+    box-shadow: rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    
+}
+
+.paras{
+    padding:0px 12px;
+    width:80%;
+    background:rgba(255,255,255,0.2);box-shadow: rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255,255,255,0.5);border-left:
+    1px solid rgba(255,255,255,0.5);border-radius: 20px;
+    text-transform: inherit;
+    text-align: left;
+}
+.paras:hover::before {
+    transform: scale(.1);
+    box-shadow: 0 0 15px #ffee10;
+    }
+
+    .paras:hover {
+    color: #ffee10;
+    box-shadow: 0 0 5px #ffee10;
+    text-shadow: 0 0 5px #ffee10;
+    transform: scale(.95);
+    transition:.6s;
+    
+    }
+
+.thumbnail img{
+    
+    width:150px;
+    border:2px solid black;
+    border-radius: 23px;
+    margin-top: 19px;
+    margin-left: 12px;
+
+}
+
+.thumbnail img:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px blue;
+    }
+
+    .thumbnail img:hover {
+
+    box-shadow: 0 0 10px blue;
+
+    }
+
+.sectiontag{
+    padding:16px 0;
+}
+.contact{
+    background-color: #f6f5f4;
+    height:100vh;
+    margin:auto;
+    text-align: center;
+    justify-content: center;
+    
+}
+.text-center{
+    text-align: center;
+}
+.form{
+    max-width: 513px;
+    margin:auto;
+    font-size: 20px;
+    
+
+}
+
+.form-input {
+    width: 500px;
+    font-size: 12px;
+    border: 2px solid #8080808f;
+    border-radius: 6px;
+    margin-top: 24px;
+    text-align: center;
+    padding: 5px;
+}
+.max{
+    width:100px;
+    margin-top: 20px;
+     background-color: #1e90ff;
+}
+.text_center{
+        text-align: center;
+    padding-top: 23px;
+    display: flex;
+    justify-content: center;
+    color:blue
+}
+.astro{
+    background-color: #9e9e9e91;
+}
+
+/*
+ <div class="sub-menu">
+                        <a href="#"><i class="fas fa-envelope"></i><span>new</span></a>
+                        <a href="#"><i class="fas fa-envelope-square"></i><span>sent</span></a>
+                        <a href="#"><i class="fas fa-exclamation-circle"></i><span>Span</span></a>
+                    </div>
+                    */
+
+

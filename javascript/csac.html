@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #fist {
+            margin: 100px;
+            font-family: Arial;
+            font-size: 17px;
+            position:relative;
+           
+
+
+
+
+        }
+
+        #poop {
+            position: sticky;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .asdf{
+            position: absolute;
+            bottom: 100px;
+            background: rgba(0, 0, 0, 0.5);
+            color: rgba(255, 192, 203, 0.835);
+            width: 80%;
+            display: block;
+            padding: 20px;
+        }
+
+        #myter {
+            width: 200px;
+            font-size: 78px;
+            padding: 10px;
+            border: 2px solid blue;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #myter:hover {
+            background: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="fist">
+
+        <video autoplay muted loop id="poop">
+            <source src="img/max.mp4" type="video/mp4">
+
+        </video>
+
+        <div class="asdf">
+            <h1 style="font-size: 88px;">Heading</h1>
+            <p style="font-size: 56px;">Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te
+                duo, eum cu recteque expetendis
+                neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine
+                molestiae, ad mutat oblique delicatissimi pro.</p>
+            <p style="font-size: 56px;">Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te
+                duo, eum cu recteque expetendis
+                neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine
+                molestiae, ad mutat oblique delicatissimi pro.</p>
+            <button id="myter" onclick="myFunction()">Pause</button>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    var poop = document.getElementById("poop");
+    var ter = document.getElementById("myter");
+
+    function myFunction() {
+        if (poop.paused) {
+            poop.play();
+            ter.innerHTML = "Pause";
+        } else {
+            poop.pause();
+            ter.innerHTML = "Play";
+        }
+    }
+</script>
+
+</html>
